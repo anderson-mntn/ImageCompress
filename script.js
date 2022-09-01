@@ -15,12 +15,15 @@ function resize(inputPath, outputPath, width){
             console.log(err);
         } else {
             console.log("Imagem Redimensionada!");
-            compress(outputPath, './temps1/compressedpraia.jpg')
+            console.log(path);
+            compress(outputPath, './temps1/' + 'compressed')
         }
     })
 }
 
-resize(path, `./temps1/praia.jpg` , width)
+
+
+resize(path, "./temps1/" + path, width)
 
 //Compressing image
 function compress(pathInput, outputPath){
